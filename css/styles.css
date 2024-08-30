@@ -142,10 +142,11 @@ a {
   background-color: #ffffff;
   top: 0;
   left: 0;
-  padding: 24px 24px 40px 16px;
   z-index: 999;
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mob-menu.is-open {
   opacity: 1;
@@ -171,7 +172,7 @@ a {
 .mob-menu-cont {
   position: relative;
   padding-top: 72px;
-  padding-bottom: 40px;
+  padding-bottom: 48px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -189,7 +190,6 @@ a {
 }
 .mob-menu-link {
   display: block;
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -224,10 +224,13 @@ a {
 }
 .mob-list-contacts {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   gap: 40px;
+}
+.mob-nav ~ .mob-list-contacts-link {
+  justify-content: center;
 }
 .mob-list-contacts-item {
   width: 40px;
